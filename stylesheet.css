@@ -1,0 +1,166 @@
+:root {
+  --cyan: #2ab2af;
+  --light-cyan: #2ebfbd;
+  --bright-yellow: #c0df34;
+  --bright-yellow-shadow: #a9c42d;
+  --grayish-blue: #98a6bd;
+  --light-grey: #e5eff5;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grayish-blue);
+}
+
+#card {
+  width: 720px;
+  height: 475px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#top-section {
+  height: 45%;
+  width: 100%;
+  padding: 35px;
+  background-color: white;
+}
+
+#top-section h2 {
+  color: var(--cyan);
+  margin: 0;
+  margin: 0px 0 20px 0;
+}
+
+#top-section h3 {
+  margin: 30x 0 20px 0;
+  color: var(--bright-yellow);
+}
+
+#top-section p {
+  margin: 0;
+  color: var(--grayish-blue);
+  line-height: 1.5em;
+}
+
+#bottom-section {
+  display: flex;
+  flex-direction: row;
+  height: 55%;
+  color: white;
+}
+
+#bottom-section h3 {
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+#sign-up-section {
+  background-color: var(--cyan);
+}
+
+#subscription-pricing-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#subscription-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#subscription-frequency {
+  color: var(--light-grey);
+  opacity: 0.7;
+  margin-left: 15px;
+}
+
+#sign-up-section p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+#sign-up-button {
+  border: none;
+  background-color: var(--bright-yellow);
+  color: white;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  /* Não entendi o porquê de ter que replicar essas propriedades de fonte aqui no botão */
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+}
+
+#sign-up-button:hover {
+  cursor: pointer;
+  background-color: var(--bright-yellow-shadow);
+}
+
+#about-us-section {
+  background-color: var(--light-cyan);
+}
+
+#about-us-section ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+#about-us-section li {
+  color: var(--light-grey);
+  opacity: 0.7;
+}
+
+#about-us-section,
+#sign-up-section {
+  padding: 40px;
+  height: 100%;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  #card {
+    height: auto;
+    margin: 20px;
+    min-width: 320px;
+  }
+
+  #bottom-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #about-us-section,
+  #sign-up-section {
+    width: 100%;
+  }
+
+  #top-section p {
+    display: inline;
+  }
+
+  body {
+    height: auto;
+  }
+}
